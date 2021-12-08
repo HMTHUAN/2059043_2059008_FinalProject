@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<Questions>
+	<Question id="1">
+		<Content>Dau la ngon ngu lap trinh ?</Content>
+		<Answers>A. CSHAP B. SQL SEVER C. W3C D. DAN AN KHAC</Answers>
+	</Question>
+	<Question id="2">
+		<Content>Dau la UNG DUNG CODE ?</Content>
+		<Answers>A. VISUAL STUDIO 2019 B. SQL SEVER C. W3C D. DAN AN KHAC</Answers>
+	</Question>
+</Questions>
