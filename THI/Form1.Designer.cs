@@ -43,13 +43,13 @@ namespace THI
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtD = new System.Windows.Forms.TextBox();
+            this.txtC = new System.Windows.Forms.TextBox();
+            this.txtB = new System.Windows.Forms.TextBox();
+            this.txtA = new System.Windows.Forms.TextBox();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.LBLTime = new System.Windows.Forms.Label();
             this.txtReadfile = new System.Windows.Forms.TextBox();
-            this.txtA = new System.Windows.Forms.TextBox();
-            this.txtC = new System.Windows.Forms.TextBox();
-            this.txtB = new System.Windows.Forms.TextBox();
-            this.txtD = new System.Windows.Forms.TextBox();
             this.btnPrevious = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
@@ -95,9 +95,11 @@ namespace THI
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(800, 470);
+            this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmit.ForeColor = System.Drawing.Color.Red;
+            this.btnSubmit.Location = new System.Drawing.Point(800, 463);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(134, 34);
+            this.btnSubmit.Size = new System.Drawing.Size(134, 46);
             this.btnSubmit.TabIndex = 3;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
@@ -145,20 +147,23 @@ namespace THI
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(485, 160);
+            this.btnStart.BackColor = System.Drawing.Color.Aqua;
+            this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStart.Location = new System.Drawing.Point(507, 185);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(195, 60);
             this.btnStart.TabIndex = 3;
             this.btnStart.Text = "Start";
-            this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.UseVisualStyleBackColor = false;
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(150, 28);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(127, 18);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(163, 17);
+            this.label3.Size = new System.Drawing.Size(223, 24);
             this.label3.TabIndex = 1;
             this.label3.Text = "THÔNG TIN NHÂN VIÊN";
             // 
@@ -169,9 +174,9 @@ namespace THI
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(485, 4);
+            this.groupBox1.Location = new System.Drawing.Point(485, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(449, 150);
+            this.groupBox1.Size = new System.Drawing.Size(449, 162);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             // 
@@ -185,11 +190,47 @@ namespace THI
             this.groupBox2.Controls.Add(this.rbtD);
             this.groupBox2.Controls.Add(this.rbtB);
             this.groupBox2.Controls.Add(this.rbtA);
-            this.groupBox2.Location = new System.Drawing.Point(485, 226);
+            this.groupBox2.Location = new System.Drawing.Point(485, 251);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(449, 175);
+            this.groupBox2.Size = new System.Drawing.Size(449, 201);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
+            // 
+            // txtD
+            // 
+            this.txtD.Enabled = false;
+            this.txtD.Location = new System.Drawing.Point(292, 100);
+            this.txtD.Multiline = true;
+            this.txtD.Name = "txtD";
+            this.txtD.Size = new System.Drawing.Size(151, 65);
+            this.txtD.TabIndex = 2;
+            // 
+            // txtC
+            // 
+            this.txtC.Enabled = false;
+            this.txtC.Location = new System.Drawing.Point(50, 100);
+            this.txtC.Multiline = true;
+            this.txtC.Name = "txtC";
+            this.txtC.Size = new System.Drawing.Size(151, 65);
+            this.txtC.TabIndex = 2;
+            // 
+            // txtB
+            // 
+            this.txtB.Enabled = false;
+            this.txtB.Location = new System.Drawing.Point(292, 20);
+            this.txtB.Multiline = true;
+            this.txtB.Name = "txtB";
+            this.txtB.Size = new System.Drawing.Size(151, 65);
+            this.txtB.TabIndex = 2;
+            // 
+            // txtA
+            // 
+            this.txtA.Enabled = false;
+            this.txtA.Location = new System.Drawing.Point(50, 20);
+            this.txtA.Multiline = true;
+            this.txtA.Name = "txtA";
+            this.txtA.Size = new System.Drawing.Size(151, 65);
+            this.txtA.TabIndex = 2;
             // 
             // timer
             // 
@@ -199,10 +240,10 @@ namespace THI
             // LBLTime
             // 
             this.LBLTime.AutoSize = true;
-            this.LBLTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLTime.Location = new System.Drawing.Point(744, 166);
+            this.LBLTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLTime.Location = new System.Drawing.Point(794, 191);
             this.LBLTime.Name = "LBLTime";
-            this.LBLTime.Size = new System.Drawing.Size(32, 36);
+            this.LBLTime.Size = new System.Drawing.Size(41, 44);
             this.LBLTime.TabIndex = 1;
             this.LBLTime.Text = "0";
             // 
@@ -215,56 +256,29 @@ namespace THI
             this.txtReadfile.Size = new System.Drawing.Size(467, 492);
             this.txtReadfile.TabIndex = 8;
             // 
-            // txtA
-            // 
-            this.txtA.Location = new System.Drawing.Point(50, 20);
-            this.txtA.Multiline = true;
-            this.txtA.Name = "txtA";
-            this.txtA.Size = new System.Drawing.Size(151, 65);
-            this.txtA.TabIndex = 2;
-            // 
-            // txtC
-            // 
-            this.txtC.Location = new System.Drawing.Point(50, 100);
-            this.txtC.Multiline = true;
-            this.txtC.Name = "txtC";
-            this.txtC.Size = new System.Drawing.Size(151, 65);
-            this.txtC.TabIndex = 2;
-            // 
-            // txtB
-            // 
-            this.txtB.Location = new System.Drawing.Point(292, 20);
-            this.txtB.Multiline = true;
-            this.txtB.Name = "txtB";
-            this.txtB.Size = new System.Drawing.Size(151, 65);
-            this.txtB.TabIndex = 2;
-            // 
-            // txtD
-            // 
-            this.txtD.Location = new System.Drawing.Point(292, 100);
-            this.txtD.Multiline = true;
-            this.txtD.Name = "txtD";
-            this.txtD.Size = new System.Drawing.Size(151, 65);
-            this.txtD.TabIndex = 2;
-            // 
             // btnPrevious
             // 
-            this.btnPrevious.Location = new System.Drawing.Point(513, 476);
+            this.btnPrevious.BackColor = System.Drawing.Color.Aqua;
+            this.btnPrevious.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrevious.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnPrevious.Location = new System.Drawing.Point(513, 469);
             this.btnPrevious.Name = "btnPrevious";
-            this.btnPrevious.Size = new System.Drawing.Size(75, 23);
+            this.btnPrevious.Size = new System.Drawing.Size(110, 35);
             this.btnPrevious.TabIndex = 9;
             this.btnPrevious.Text = "Previous";
-            this.btnPrevious.UseVisualStyleBackColor = true;
+            this.btnPrevious.UseVisualStyleBackColor = false;
             this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
             // 
             // btnNext
             // 
-            this.btnNext.Location = new System.Drawing.Point(663, 476);
+            this.btnNext.BackColor = System.Drawing.Color.Aqua;
+            this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNext.Location = new System.Drawing.Point(663, 469);
             this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(75, 23);
+            this.btnNext.Size = new System.Drawing.Size(110, 35);
             this.btnNext.TabIndex = 9;
             this.btnNext.Text = "Next";
-            this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.UseVisualStyleBackColor = false;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // Form1
@@ -280,6 +294,7 @@ namespace THI
             this.Controls.Add(this.LBLTime);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnSubmit);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

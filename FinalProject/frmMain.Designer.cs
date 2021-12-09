@@ -51,9 +51,9 @@ namespace FinalProject
             // 
             // btnADD
             // 
-            this.btnADD.Location = new System.Drawing.Point(425, 25);
+            this.btnADD.Location = new System.Drawing.Point(534, 26);
             this.btnADD.Name = "btnADD";
-            this.btnADD.Size = new System.Drawing.Size(141, 28);
+            this.btnADD.Size = new System.Drawing.Size(141, 65);
             this.btnADD.TabIndex = 1;
             this.btnADD.Text = "add Question";
             this.btnADD.UseVisualStyleBackColor = true;
@@ -61,7 +61,7 @@ namespace FinalProject
             // 
             // txtQuestion
             // 
-            this.txtQuestion.Location = new System.Drawing.Point(88, 26);
+            this.txtQuestion.Location = new System.Drawing.Point(186, 31);
             this.txtQuestion.Name = "txtQuestion";
             this.txtQuestion.Size = new System.Drawing.Size(314, 22);
             this.txtQuestion.TabIndex = 2;
@@ -71,13 +71,13 @@ namespace FinalProject
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(25, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 17);
+            this.label1.Size = new System.Drawing.Size(121, 17);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Question";
+            this.label1.Text = "number_Question";
             // 
             // txtContent
             // 
-            this.txtContent.Location = new System.Drawing.Point(88, 69);
+            this.txtContent.Location = new System.Drawing.Point(186, 69);
             this.txtContent.Name = "txtContent";
             this.txtContent.Size = new System.Drawing.Size(314, 22);
             this.txtContent.TabIndex = 2;
@@ -85,7 +85,7 @@ namespace FinalProject
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 74);
+            this.label2.Location = new System.Drawing.Point(89, 74);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 17);
             this.label2.TabIndex = 3;
@@ -93,7 +93,7 @@ namespace FinalProject
             // 
             // txtABC
             // 
-            this.txtABC.Location = new System.Drawing.Point(88, 112);
+            this.txtABC.Location = new System.Drawing.Point(186, 114);
             this.txtABC.Multiline = true;
             this.txtABC.Name = "txtABC";
             this.txtABC.Size = new System.Drawing.Size(314, 97);
@@ -102,17 +102,17 @@ namespace FinalProject
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(25, 117);
+            this.label3.Location = new System.Drawing.Point(38, 114);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 17);
+            this.label3.Size = new System.Drawing.Size(108, 17);
             this.label3.TabIndex = 3;
-            this.label3.Text = "ABC";
+            this.label3.Text = "Answers(ABCD)";
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(425, 97);
+            this.btnSave.Location = new System.Drawing.Point(534, 127);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(141, 28);
+            this.btnSave.Size = new System.Drawing.Size(141, 69);
             this.btnSave.TabIndex = 1;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -122,7 +122,7 @@ namespace FinalProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1457, 519);
+            this.ClientSize = new System.Drawing.Size(730, 519);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);

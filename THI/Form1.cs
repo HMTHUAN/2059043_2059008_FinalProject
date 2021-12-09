@@ -13,6 +13,7 @@ namespace THI
 {
     public partial class Form1 : Form
     {
+        // danh sách các câu hỏi thông qua class Question
         List<Questions> listQ = new List<Questions>();
         private int counter = 60;
         public Form1()
@@ -20,8 +21,10 @@ namespace THI
             InitializeComponent();
         }
 
+        // Bắt đầu làm bài 
         private void btnStart_Click(object sender, EventArgs e)
         {
+            // thông tin nhân viên chưa được nhập thì không được bắt đầu thi
             if(txtHoten.Text == "" && txtMSSV.Text == "")
             {
                 MessageBox.Show("VUI LONG DIEN THONG TIN  NHAN VIEN !!!");
@@ -29,11 +32,14 @@ namespace THI
             else
             {
                 LoadFilequestion();
+                //đếm ngược thời gian thi
                 timer.Start();
                 LBLTime.Text = counter.ToString();
+                
             }
         }
 
+        // ĐỌC FILE XML XUẤT RA MÀN HÌNH Ở DẠNG TEXT BAO GỒM CÂU HỎI VÀ CÁC CÂU TRẢ LỜI
         private void LoadFilequestion()
         {
             XmlReader rd = XmlReader.Create("TEXT_1.xml");
@@ -54,6 +60,8 @@ namespace THI
                 listQ.Add(QS);
             }
             rd.Close();
+            txtReadfile.Text = listQ[0].id;
+            // xuất câu hỏi đầu tiên và các câu trả lời ra màn hình
             txtReadfile.Text = listQ[0].Content;
             txtA.Text = listQ[0].A;
             txtB.Text = listQ[0].B;
@@ -66,24 +74,27 @@ namespace THI
             this.Close();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
         private void timer_Tick(object sender, EventArgs e)
         {
             counter--;
-            if (counter == 0)
-                timer.Stop();
             LBLTime.Text = counter.ToString();
+
+            if (counter == 0)
+            {
+                timer.Stop();
+                // thong bao het thoi gian lam bai khi time = 0
+                MessageBox.Show("DA HET THOI GIAN LAM BAI, VUI LONG SUBMIT !!!");
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            BackgroundImage = new Bitmap(@"img/backGround.jpg");
         }
 
         int index = 0;
 
+        // CHUYỂN SANG CÂU KẾ TIẾP
         private void btnNext_Click(object sender, EventArgs e)
         {
             index++;
@@ -98,14 +109,21 @@ namespace THI
             else
                 btnNext.Enabled = false;
             btnPrevious.Enabled = true;
+
+            // thong bao het thoi gian lam bai khi time = 0
+            if (counter == 0)
+            {
+                timer.Stop();
+                MessageBox.Show("DA HET THOI GIAN LAM BAI, VUI LONG SUBMIT !!!");
+            }
         }
 
+        //CHUYỂN SANG CÂU TRƯỚC ĐÓ
         private void btnPrevious_Click(object sender, EventArgs e)
         {
             index--;
-            if (index == 0)
+            if (index == -1)
             {
-
                 btnPrevious.Enabled = false;
             }
             else
@@ -117,11 +135,17 @@ namespace THI
                 txtD.Text = listQ[index].D;
             }
             btnNext.Enabled = true;
+
+            // thong bao het thoi gian lam bai khi time = 0
+            if (counter == 0)
+            {
+                timer.Stop();
+                MessageBox.Show("DA HET THOI GIAN LAM BAI, VUI LONG SUBMIT !!!");
+            }
         }
 
         private void txtHoten_TextChanged(object sender, EventArgs e)
         {
-
         }
     }
 }
